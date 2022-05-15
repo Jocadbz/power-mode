@@ -19,7 +19,11 @@ powermode power
 Convenience huh?
 
 This was created mainly for my own personal benefit, but i'm uploading
-this to Github so i don't randomly lose it on a distro-hopping event.
+this to GitHub, so I don't randomly lose it on a distro-hopping event.
+
+### Installation
+
+Just grab the file on the releases section and copy it to `/usr/bin`.
 
 ### Note: 
 "The manual for this software is available on the *src* folder"
