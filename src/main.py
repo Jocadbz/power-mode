@@ -2,16 +2,16 @@
 import sys
 import subprocess
 
-app_help = f"""
+app_help = """
     Power Mode
     Version 1.0.0
     Jocadbz, 2022
-    
-    
+
+
     Usage:
     powermode [mode]
     (Run without arguments to get the current used mode)
-    
+
     Modes:
     - power
     - balanced
@@ -20,7 +20,7 @@ app_help = f"""
 
 
 def get_mode():
-    print(f"The current mode is:")
+    print("The current mode is:")
     subprocess.call("powerprofilesctl get", shell=True)
     sys.exit(0)
 
@@ -98,7 +98,8 @@ def saving_mode():
 
 version = "Version 1.0.0"
 
-abbreviationsDict = {"power": power_mode, "balanced": balanced_mode, "saving": saving_mode, "trollface": trollface}
+abbreviationsDict = {"power": power_mode, "balanced": balanced_mode,
+                     "saving": saving_mode, "trollface": trollface}
 
 
 def do_work():
