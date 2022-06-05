@@ -3,19 +3,19 @@ import sys
 import subprocess
 
 app_help = """
-    Power Mode
-    Version 1.0.0
-    Jocadbz, 2022
+Power Mode
+Version 1.0.0
+Jocadbz, 2022
 
 
-    Usage:
-    powermode [mode]
-    (Run without arguments to get the current used mode)
+Usage:
+powermode [mode]
+(Run without arguments to get the current used mode)
 
-    Modes:
-    - power
-    - balanced
-    - saving
+Modes:
+- power
+- balanced
+- saving
        """
 
 
@@ -57,11 +57,11 @@ def trollface():
 def power_mode():
     prompt1 = """
 
-    [x] Power Mode
-    [ ] Balanced Mode
-    [ ] Power-Saving Mode
+[x] Power Mode
+[ ] Balanced Mode
+[ ] Power-Saving Mode
 
-    Power-mode selected.
+Power-mode selected.
     """
     subprocess.run("powerprofilesctl performance", shell=True)
     print(prompt1)
@@ -71,11 +71,11 @@ def power_mode():
 def balanced_mode():
     prompt2 = """
 
-    [ ] Power Mode
-    [x] Balanced Mode
-    [ ] Power-Saving Mode
+[ ] Power Mode
+[x] Balanced Mode
+[ ] Power-Saving Mode
 
-    Balanced mode selected.
+Balanced mode selected.
     """
     subprocess.call("powerprofilesctl balanced", shell=True)
     print(prompt2)
@@ -85,11 +85,11 @@ def balanced_mode():
 def saving_mode():
     prompt3 = """
 
-    [ ] Power Mode
-    [ ] Balanced Mode
-    [x] Power-Saving Mode
+[ ] Power Mode
+[ ] Balanced Mode
+[x] Power-Saving Mode
 
-    Power-saving mode selected.
+Power-saving mode selected.
     """
     subprocess.call("powerprofilesctl power-saver", shell=True)
     print(prompt3)
