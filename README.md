@@ -20,7 +20,7 @@ This tool improves overral usability and makes the CLI tool nicer to use.
 
 ### Installation
 
-If you are isong Arch Linux, power-mode is available on `jocadbz-arch-repo`, a pacman
+If you are using Arch Linux, power-mode is available on `jocadbz-arch-repo`, a pacman
 repository i made for my projects. Instructions at <a href="https://jocadbz.github.io/arch-repo" target="_blank" rel="noopener noreferrer">my site</a>.
 
 Just grab the file on the releases section and copy it to `/usr/bin`.
