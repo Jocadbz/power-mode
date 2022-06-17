@@ -63,7 +63,7 @@ def power_mode():
 
 Power-mode selected.
     """
-    subprocess.run("powerprofilesctl performance", shell=True)
+    subprocess.run("powerprofilesctl set performance", shell=True)
     print(prompt1)
     sys.exit(0)
 
@@ -77,7 +77,7 @@ def balanced_mode():
 
 Balanced mode selected.
     """
-    subprocess.call("powerprofilesctl balanced", shell=True)
+    subprocess.call("powerprofilesctl set balanced", shell=True)
     print(prompt2)
     sys.exit(0)
 
@@ -91,7 +91,7 @@ def saving_mode():
 
 Power-saving mode selected.
     """
-    subprocess.call("powerprofilesctl power-saver", shell=True)
+    subprocess.call("powerprofilesctl set power-saver", shell=True)
     print(prompt3)
     sys.exit(0)
 
