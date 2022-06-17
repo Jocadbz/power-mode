@@ -11,6 +11,7 @@
 - power-profiles-daemon
 - powerprofilesctl
 - python3
+- <a href="https://github.com/Jocadbz/lib-powerprofiles" target="_blank">lib-powerprofiles</a>
 <br></br>
 
 ## Installation
