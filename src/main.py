@@ -1,11 +1,10 @@
 #! /usr/bin/env python3
-import sys
-import subprocess
+from sys import argv, exit
 import powerprofiles
 
 app_help = """
 Power Mode
-Version 1.0.1
+Version 1.1.0
 Jocadbz, 2022
 
 
@@ -22,7 +21,7 @@ Modes:
 
 def get_mode():
     print(f"The current mode is: {powerprofiles.get()}")
-    sys.exit(0)
+    exit(0)
 
 
 def power_mode():
@@ -36,7 +35,7 @@ Power-mode selected.
     """
     powerprofiles.set_performance()
     print(prompt1)
-    sys.exit(0)
+    exit(0)
 
 
 def balanced_mode():
@@ -50,7 +49,7 @@ Balanced mode selected.
     """
     powerprofiles.set_balanced()
     print(prompt2)
-    sys.exit(0)
+    exit(0)
 
 
 def saving_mode():
@@ -64,10 +63,10 @@ Power-saving mode selected.
     """
     powerprofiles.set_power_saver()
     print(prompt3)
-    sys.exit(0)
+    exit(0)
 
 
-version = "Version 1.0.1"
+version = "Version 1.1.0"
 
 abbreviationsDict = {"power": power_mode, "balanced": balanced_mode,
                      "saving": saving_mode}
@@ -75,21 +74,21 @@ abbreviationsDict = {"power": power_mode, "balanced": balanced_mode,
 
 def do_work():
     """ Function to handle command line usage"""
-    args = sys.argv
+    args = argv
     args = args[1:]  # First element of args is the file name
 
     if len(args) == 0:
         get_mode()
-        sys.exit(0)
+        exit(0)
     else:
         for arguments in args:
             arguments = arguments.lower()
             if arguments == '--help' or arguments == '-h':
                 print(app_help)
-                sys.exit(0)
+                exit(0)
             elif arguments == '--version':
                 print(version)
-                sys.exit(0)
+                exit(0)
             else:
                 try:
                     # Get your function based on key in abbreviationsDict
