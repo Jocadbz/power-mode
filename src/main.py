@@ -113,7 +113,7 @@ def do_work():
     else:
         for arguments in args:
             arguments = arguments.lower()
-            if arguments == '--help':
+            if arguments == '--help' or arguments == '-h':
                 print(app_help)
                 sys.exit(0)
             elif arguments == '--version':
