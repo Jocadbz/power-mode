@@ -1,30 +1,46 @@
-# Power mode
+<h1 align="center"><code>Power Mode</code></h1>
+<p align="center">CLI tool for Power Profiles Daemon</p>
 
-An "wrapper" for "`powerprofilesctl`", the command-line tool for
-the power-profiles program.
+<p align="center">
+<a href="Power Mode.svg">
+  <img src="Power Mode.svg">
+</a>
+</p>
 
-## What this does?
+## Dependencies
+- power-profiles-daemon
+- powerprofilesctl
+- python3
+<br></br>
 
+## Installation
 
-Hum... Instead of typing:
+Package Manager/Binary:
+```bash
+# On Arch Linux
+wget https://jocadbz.github.io/arch-repo/x86_64/power-mode-1.0.0-1-any.pkg.tar.zst
+sudo pacman -U power-mode-1.0.0-1-any.pkg.tar.zst
+
+# From binary
+wget https://github.com/Jocadbz/power-mode/releases/download/v1.0.0/powermode
+sudo mv powermode /usr/bin/
 ```
-powerprofilesctl performance
+
+From source:
+```bash
+pip install pyinstaller
+git clone https://github.com/Jocadbz/power-mode.git && cd power-mode/src/
+pyinstaller --onefile main.py
 ```
 
-All you have to do is type:
+## Usage
+
+```bash
+powermode [mode]
+(Run without arguments to get the current used mode)
+    
+Modes:
+- power
+- balanced
+- saving
 ```
-powermode power
-```
-
-This tool improves overral usability and makes the CLI tool nicer to use.
-
-### Installation
-
-If you are using Arch Linux, power-mode is available on `jocadbz-arch-repo`, a pacman
-repository i made for my projects. Instructions at <a href="https://jocadbz.github.io/arch-repo" target="_blank" rel="noopener noreferrer">my site</a>.
-
-If you are using other distro, or don't want to mess with a repository, just grab
-the file on the releases section and copy it to `/usr/bin`.
-
-### Note: 
-"The manual for this software is available on the *src* folder"
