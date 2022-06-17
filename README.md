@@ -19,11 +19,11 @@
 Package Manager/Binary:
 ```bash
 # On Arch Linux
-wget https://jocadbz.github.io/arch-repo/x86_64/power-mode-1.0.0-1-any.pkg.tar.zst
-sudo pacman -U power-mode-1.0.0-1-any.pkg.tar.zst
+wget https://jocadbz.github.io/arch-repo/x86_64/power-mode-1.1.0-1-any.pkg.tar.zst
+sudo pacman -U power-mode-1.1.0-1-any.pkg.tar.zst
 
 # From binary
-wget https://github.com/Jocadbz/power-mode/releases/download/v1.0.0/powermode
+wget https://github.com/Jocadbz/power-mode/releases/download/v1.1.0/powermode
 sudo mv powermode /usr/bin/
 ```
 
