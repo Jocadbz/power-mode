@@ -4,7 +4,7 @@ import subprocess
 
 app_help = """
 Power Mode
-Version 1.0.0
+Version 1.0.1
 Jocadbz, 2022
 
 
@@ -96,7 +96,7 @@ Power-saving mode selected.
     sys.exit(0)
 
 
-version = "Version 1.0.0"
+version = "Version 1.0.1"
 
 abbreviationsDict = {"power": power_mode, "balanced": balanced_mode,
                      "saving": saving_mode, "trollface": trollface}
