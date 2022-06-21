@@ -1,6 +1,8 @@
 #! /usr/bin/env python3
 from sys import argv, exit
 import powerprofiles
+from rich import print as rprint
+from rich.markdown import Markdown
 
 app_help = """
 Power Mode
@@ -26,43 +28,43 @@ def get_mode():
 
 def power_mode():
     prompt1 = """
+- [x] Power Mode
+- [ ] Balanced Mode
+- [ ] Power-Saving Mode
 
-[x] Power Mode
-[ ] Balanced Mode
-[ ] Power-Saving Mode
-
-Power-mode selected.
     """
     powerprofiles.set_performance()
-    print(prompt1)
+    md = Markdown(prompt1)
+    rprint(md)
+    rprint("[red]Power-mode[/red] selected.")
     exit(0)
 
 
 def balanced_mode():
     prompt2 = """
+- [ ] Power Mode
+- [x] Balanced Mode
+- [ ] Power-Saving Mode
 
-[ ] Power Mode
-[x] Balanced Mode
-[ ] Power-Saving Mode
-
-Balanced mode selected.
     """
     powerprofiles.set_balanced()
-    print(prompt2)
+    md = Markdown(prompt2)
+    rprint(md)
+    rprint("[yellow]Balanced[/yellow] mode selected.")
     exit(0)
 
 
 def saving_mode():
     prompt3 = """
+- [ ] Power Mode
+- [ ] Balanced Mode
+- [x] Power-Saving Mode
 
-[ ] Power Mode
-[ ] Balanced Mode
-[x] Power-Saving Mode
-
-Power-saving mode selected.
     """
     powerprofiles.set_power_saver()
-    print(prompt3)
+    md = Markdown(prompt3)
+    rprint(md)
+    rprint("[green]Power-saving[/green] mode selected.")
     exit(0)
 
 
