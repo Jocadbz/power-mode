@@ -10,8 +10,6 @@
 ## Dependencies
 - power-profiles-daemon
 - powerprofilesctl
-- python3
-- <a href="https://github.com/Jocadbz/lib-powerprofiles" target="_blank">lib-powerprofiles</a>
 <br></br>
 
 ## Installation
@@ -19,29 +17,36 @@
 Package Manager/Binary:
 ```bash
 # On Arch Linux
-wget https://jocadbz.github.io/arch-repo/x86_64/power-mode-1.1.0-1-any.pkg.tar.zst
-sudo pacman -U power-mode-1.1.0-1-any.pkg.tar.zst
+wget https://jocadbz.github.io/arch-repo/x86_64/power-mode-2.0.0-1-any.pkg.tar.zst
+sudo pacman -U power-mode-2.0.0-1-any.pkg.tar.zst
 
 # From binary
-wget https://github.com/Jocadbz/power-mode/releases/download/v1.1.0/powermode
+wget https://github.com/Jocadbz/power-mode/releases/download/v2.0.0/powermode
 sudo mv powermode /usr/bin/
 ```
 
 From source:
 ```bash
-pip install pyinstaller
+# You need to install the V compiler
 git clone https://github.com/Jocadbz/power-mode.git && cd power-mode/src/
-pyinstaller --onefile main.py
+v main.v
 ```
 
 ## Usage
 
 ```bash
-powermode [mode]
-(Run without arguments to get the current used mode)
-    
-Modes:
-- power
-- balanced
-- saving
+Usage: powermode [flags] [commands]
+
+CLI tool for powerprofiles ctl
+
+Flags:
+  -help               Prints help information.
+  -version            Prints version information.
+
+Commands:
+  power               Sets Power mode
+  balanced            Sets balanced mode
+  saving              Sets Power-saving mode
+  help                Prints help information.
+  version             Prints version information.
 ```
