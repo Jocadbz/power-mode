@@ -19,7 +19,7 @@ fn main() {
                 description: 'Sets Power mode'
                 execute: fn (cmd cli.Command) ? {
                     function.performance()
-                    exit(0)
+                    return
                 }
             }
             cli.Command{
@@ -27,7 +27,7 @@ fn main() {
                 description: 'Sets balanced mode'
                 execute: fn (cmd cli.Command) ? {
                     function.balanced()
-                    exit(0)
+                    return
                 }
             }
             cli.Command{
@@ -35,7 +35,7 @@ fn main() {
                 description: 'Sets Power-saving mode'
                 execute: fn (cmd cli.Command) ? {
                     function.power_saver()
-                    exit(0)
+                    return
                 }
             }
         ]
